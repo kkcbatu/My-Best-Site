@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Phawes.py tarafından Discord bot kodları, AI botlar, ticket sistemleri, otomatik sunucu kurulumları ve özel Discord sistemleri.">
+  <title>Phawes.py | Discord Bot Hizmetleri</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="intro-active">
+  <div class="ambient-field" id="ambientField" aria-hidden="true"></div>
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+  <div class="cursor-spotlight" id="cursorSpotlight" aria-hidden="true"></div>
+  <canvas class="cursor-trail" id="cursorTrail" aria-hidden="true"></canvas>
+  <section class="intro-screen" id="introScreen" aria-label="Cipher Hub giriş ekranı">
+    <div class="intro-grid" aria-hidden="true"></div>
+    <div class="intro-orbit" aria-hidden="true">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="intro-rain" aria-hidden="true">
+      <span>0101</span>
+      <span>AUTH</span>
+      <span>NODE</span>
+      <span>SYNC</span>
+      <span>1100</span>
+      <span>ROOT</span>
+      <span>LINK</span>
+      <span>0110</span>
+    </div>
+    <div class="intro-content">
+      <p class="intro-kicker" data-i18n="introKicker">bağlantı kuruluyor</p>
+      <h1 class="intro-logo" data-text="CIPHER HUB">CIPHER HUB</h1>
+      <p class="intro-message" data-i18n="introMessage">özel discord sistemleri için güvenli bağlantı hazırlanıyor</p>
+      <div class="intro-status" aria-hidden="true">
+        <span data-i18n="introStatus1">çekirdek doğrulanıyor</span>
+        <span data-i18n="introStatus2">arayüz hazırlanıyor</span>
+        <span data-i18n="introStatus3">erişim aktif</span>
+      </div>
+      <div class="intro-progress" aria-hidden="true"><span></span></div>
+      <button class="intro-enter" type="button" id="enterSite" data-i18n="introEnter">Giriş</button>
+    </div>
+  </section>
+
+  <div class="site-shell">
+    <header class="topbar">
+      <a class="brand" href="#hero" aria-label="Phawes.py ana sayfa">
+        <span class="brand-mark">P</span>
+        <span>Phawes.py</span>
+      </a>
+      <nav class="nav" aria-label="Ana menü">
+        <a href="#paketler" data-i18n="navPackages">Paketler</a>
+        <a href="#ozel" data-i18n="navCustom">Özel Botlar</a>
+        <a href="#ekstralar" data-i18n="navExtras">Ekstralar</a>
+        <a href="#siparis" data-i18n="navOrder">Sipariş</a>
+        <a href="#iletisim" data-i18n="navContact">İletişim</a>
+      </nav>
+      <div class="topbar-actions">
+        <div class="language-switch" role="group" aria-label="Dil seçimi">
+          <button class="active" type="button" data-lang="tr">TR</button>
+          <button type="button" data-lang="en">EN</button>
+        </div>
+        <a class="nav-cta" href="https://discord.gg/GpvNeAuQBM" target="_blank" rel="noreferrer" data-i18n="discordJoin">Discord'a Gel</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="hero">
+        <div class="hero-copy">
+          <p class="eyebrow" data-i18n="heroEyebrow">Discord bot kodları ve özel sistemler</p>
+          <h1 data-i18n="heroTitle">Sunucuna yakışan soft cyberpunk bot deneyimi.</h1>
+          <p class="hero-lead" data-i18n="heroLead">Moderasyon, ticket, log, AI karakter, otomatik sunucu kurulumları ve sunucuna özel bot sistemlerini temiz kod, net teslimat ve güçlü tasarımla hazırlıyorum.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="https://discord.gg/GpvNeAuQBM" target="_blank" rel="noreferrer" data-i18n="getQuote">Teklif al</a>
+            <button class="button ghost copy-button" type="button" data-copy="phawes.py" data-i18n="copyDiscord">Discord kopyala</button>
+          </div>
+          <div class="hero-stats" aria-label="Hizmet özeti">
+            <div><strong>5</strong><span data-i18n="statPackages">Bot Paketi</span></div>
+            <div><strong>15+</strong><span data-i18n="statExtras">Ekstra Sistem</span></div>
+            <div><strong>7/24</strong><span data-i18n="statHosting">Hosting Opsiyonu</span></div>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-label="Discord bot panel önizlemesi">
+          <div class="hud-header"><span></span><span></span><span></span><p>bot_core.py</p></div>
+          <div class="terminal-lines">
+            <p><span class="muted">$</span> deploy --guild your-server</p>
+            <p><span class="cyan">status</span> moderation.active = true</p>
+            <p><span class="cyan">setup</span> auto_guild_builder = ready</p>
+            <p><span class="pink">ai</span> memory.vector = online</p>
+            <p><span class="green">ready</span> slash commands loaded</p>
+          </div>
+          <div class="bot-panel">
+            <div class="bot-avatar">PY</div>
+            <div><h2>Phawes Bot</h2><p data-i18n="botPanelText">AI + Moderasyon + Sunucu Kurulum</p></div>
+            <span class="status-pill">online</span>
+          </div>
+          <div class="signal-grid" aria-hidden="true">
+            <span style="--height: 44%"></span><span style="--height: 78%"></span><span style="--height: 58%"></span>
+            <span style="--height: 92%"></span><span style="--height: 66%"></span><span style="--height: 84%"></span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section intro-band" aria-label="Hizmet tanıtımı">
+        <p data-i18n="introText">Hedef basit: botun sadece çalışmasın, sunucunun karakterine de uysun. Komut isimlerinden embed diline, yetki mantığından otomasyon akışına kadar sistemi marka gibi tasarlarım.</p>
+      </section>
+
+      <section class="section" id="paketler">
+        <div class="section-heading"><p class="eyebrow" data-i18n="priceList">Fiyat listesi</p><h2 data-i18n="packagesTitle">Discord bot paketleri</h2></div>
+        <div class="pricing-grid">
+          <article class="price-card">
+            <div class="card-top"><h3 data-i18n="basicTitle">Temel Paket</h3><p class="price" data-price-try="750">750 TL</p></div>
+            <ul><li data-i18n="basic1">Basit moderasyon sistemi</li><li data-i18n="basic2">Komut sistemi</li><li data-i18n="basic3">Otomatik rol</li><li data-i18n="basic4">Hoş geldin mesajı</li><li data-i18n="basic5">Basit log sistemi</li></ul>
+            <a class="card-link" href="#iletisim" data-i18n="basicCta">Bu paketle başla</a>
+          </article>
+          <article class="price-card featured">
+            <div class="badge" data-i18n="bestBadge">En dengeli</div>
+            <div class="card-top"><h3 data-i18n="advancedTitle">Gelişmiş Paket</h3><p class="price" data-price-try="1500">1500 TL</p></div>
+            <ul><li data-i18n="adv1">Ticket sistemi</li><li data-i18n="adv2">Gelişmiş log sistemi</li><li data-i18n="adv3">Özel komutlar</li><li data-i18n="adv4">Embed tasarımları</li><li data-i18n="adv5">Yetki sistemi</li><li data-i18n="adv6">Sunucuya özel ayarlar</li></ul>
+            <a class="card-link" href="#iletisim" data-i18n="advancedCta">Gelişmiş teklif al</a>
+          </article>
+          <article class="price-card">
+            <div class="card-top"><h3 data-i18n="aiTitle">AI Bot Paketi</h3><p class="price" data-price-try="3000" data-price-plus="true">3000 TL+</p></div>
+            <ul><li data-i18n="ai1">Gemini/OpenAI entegrasyonu</li><li data-i18n="ai2">Karakter kişiliği</li><li data-i18n="ai3">Özel cevap sistemi</li><li data-i18n="ai4">RP sistemi</li><li data-i18n="ai5">Hafıza sistemi</li><li data-i18n="ai6">Kullanıcıya özel davranışlar</li></ul>
+            <a class="card-link" href="#iletisim" data-i18n="aiCta">AI bot konuşalım</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section special-section" id="ozel">
+        <div class="section-heading"><p class="eyebrow" data-i18n="customEyebrow">İsteğe göre botlar</p><h2 data-i18n="customTitle">Hazır paket dışı özel sistemler</h2></div>
+        <div class="special-grid">
+          <article class="special-card"><div><span class="badge" data-i18n="newBadge">Yeni</span><h3 data-i18n="serverSetupTitle">Otomatik Sunucu Kurma Botu</h3><p data-i18n="serverSetupText">Kanal, kategori, rol, izin, embed ve temel sunucu düzenini tek akışta kuran sistem.</p></div><strong data-i18n="discordPrice">Fiyat bilgisi için Discord'a gel</strong></article>
+          <article class="special-card"><div><span class="badge" data-i18n="securityBadge">Güvenlik</span><h3 data-i18n="backupTitle">Sunucu Yedekleme ve Koruma Botu</h3><p data-i18n="backupText">Sunucu düzenini yedekleme, geri yükleme, anti-raid, log ve güvenlik akışlarını tek yerde toplar.</p></div><strong data-i18n="discordPrice">Fiyat bilgisi için Discord'a gel</strong></article>
+          <article class="special-card"><div><span class="badge" data-i18n="suggestionBadge">Öneri</span><h3 data-i18n="programsTitle">Farklı Programlar ve Botlar</h3><p data-i18n="programsText">Discord botları, web panelleri, masaüstü araçlar, API bağlantıları ve özel otomasyon fikirleri konuşulur.</p></div><strong data-i18n="discordPrice">Fiyat bilgisi için Discord'a gel</strong></article>
+          <article class="special-card"><div><span class="badge" data-i18n="socialBadge">Sosyal</span><h3 data-i18n="socialTitle">Sosyal Medya Bildirim Botları</h3><p data-i18n="socialText">Instagram, YouTube, Twitter/X ve TikTok için paylaşım bildirimi, içerik takibi ve raporlama sistemleri.</p></div><strong data-i18n="customPrice">İsteğe göre fiyat verilir</strong></article>
+          <article class="special-card"><div><span class="badge" data-i18n="notifyBadge">Bildirim</span><h3 data-i18n="smsTitle">SMS ve Çağrı Bildirim Sistemi</h3><p data-i18n="smsText">Onaylı kullanıcılar için hatırlatma, doğrulama, randevu ve durum bildirimi gibi yasal bildirim akışları.</p></div><strong data-i18n="customPrice">İsteğe göre fiyat verilir</strong></article>
+          <article class="special-card"><div><span class="badge" data-i18n="customBadge">Özel</span><h3 data-i18n="automationTitle">Özel Otomasyonlar</h3><p data-i18n="automationText">Sunucu yönetimi, kayıt, ekonomi, çekiliş, dashboard ve sana özel iş akışları proje detayına göre hazırlanır.</p></div><strong data-i18n="customPrice">İsteğe göre fiyat verilir</strong></article>
+        </div>
+      </section>
+
+      <section class="section extras-section" id="ekstralar">
+        <div class="section-heading"><p class="eyebrow" data-i18n="extrasEyebrow">Ekstra özellikler</p><h2 data-i18n="extrasTitle">Sunucuya göre genişlet</h2></div>
+        <div class="extras-layout">
+          <div class="extras-grid" id="extrasList">
+            <label class="extra-item"><input type="checkbox" data-price="250"><span data-i18n="extraHostingSetup">Hosting Kurulumu</span><strong data-price-try="250" data-price-prefix="+">+250 TL</strong></label>
+            <label class="extra-item range"><input type="checkbox" data-price="150"><span data-i18n="extraHosting">7/24 Hosting</span><strong data-price-try="150" data-price-try-max="500" data-price-prefix="+" data-price-period="monthly">Aylık +150-500 TL</strong></label>
+            <label class="extra-item"><input type="checkbox" data-price="1000"><span data-i18n="extraDashboard">Web Dashboard</span><strong data-price-try="1000" data-price-prefix="+">+1000 TL</strong></label>
+            <label class="extra-item"><input type="checkbox" data-price="250"><span data-i18n="extraEmbeds">Özel Tasarım Embedler</span><strong data-price-try="250" data-price-prefix="+">+250 TL</strong></label>
+            <label class="extra-item"><input type="checkbox" data-price="750"><span data-i18n="extraMemory">Yapay Zeka Hafıza Sistemi</span><strong data-price-try="750" data-price-prefix="+">+750 TL</strong></label>
+            <label class="extra-item"><input type="checkbox" data-price="500"><span data-i18n="extraLanguage">Çoklu Dil Sistemi</span><strong data-price-try="500" data-price-prefix="+">+500 TL</strong></label>
+            <label class="extra-item range"><input type="checkbox" data-price="500"><span data-i18n="extraGame">Oyun Sunucusu Entegrasyonu</span><strong data-price-try="500" data-price-try-max="1500" data-price-prefix="+">+500-1500 TL</strong></label>
+            <label class="extra-item"><input type="checkbox" data-price="300"><span data-i18n="extraCommands">Özel Komut Sistemi</span><strong data-price-try="300" data-price-prefix="+">+300 TL</strong></label>
+            <label class="extra-item"><input type="checkbox" data-price="400"><span data-i18n="extraMusic">Müzik Sistemi</span><strong data-price-try="400" data-price-prefix="+">+400 TL</strong></label>
+            <label class="extra-item"><input type="checkbox" data-price="350"><span data-i18n="extraLevel">Level Sistemi</span><strong data-price-try="350" data-price-prefix="+">+350 TL</strong></label>
+            <label class="extra-item"><input type="checkbox" data-price="750"><span data-i18n="extraSecurity">Özel Güvenlik Sistemi</span><strong data-price-try="750" data-price-prefix="+">+750 TL</strong></label>
+            <label class="extra-item"><input type="checkbox" data-price="500"><span data-i18n="extraAntiRaid">Anti Raid Sistemi</span><strong data-price-try="500" data-price-prefix="+">+500 TL</strong></label>
+            <label class="extra-item"><input type="checkbox" data-price="1000"><span data-i18n="extraAiCharacter">Özel AI Karakteri</span><strong data-price-try="1000" data-price-prefix="+">+1000 TL</strong></label>
+            <label class="extra-item custom-price"><input type="checkbox" data-price="0"><span data-i18n="serverSetupTitle">Otomatik Sunucu Kurma Botu</span><strong data-i18n="priceOnDiscord">Discord'da fiyat al</strong></label>
+            <label class="extra-item custom-price"><input type="checkbox" data-price="0"><span data-i18n="backupTitle">Sunucu Yedekleme ve Koruma Botu</span><strong data-i18n="priceOnDiscord">Discord'da fiyat al</strong></label>
+            <label class="extra-item custom-price"><input type="checkbox" data-price="0"><span data-i18n="socialTitle">Sosyal Medya Bildirim Botları</span><strong data-i18n="priceOnDiscord">Discord'da fiyat al</strong></label>
+            <label class="extra-item custom-price"><input type="checkbox" data-price="0"><span data-i18n="smsTitle">SMS ve Çağrı Bildirim Sistemi</span><strong data-i18n="priceOnDiscord">Discord'da fiyat al</strong></label>
+            <label class="extra-item custom-price"><input type="checkbox" data-price="0"><span data-i18n="programsTitle">Farklı Programlar ve Botlar</span><strong data-i18n="priceOnDiscord">Discord'da fiyat al</strong></label>
+            <label class="extra-item"><input type="checkbox" data-price="600"><span data-i18n="extraRegister">Kayıt Sistemi</span><strong data-price-try="600" data-price-prefix="+">+600 TL</strong></label>
+            <label class="extra-item"><input type="checkbox" data-price="450"><span data-i18n="extraGiveaway">Çekiliş Sistemi</span><strong data-price-try="450" data-price-prefix="+">+450 TL</strong></label>
+            <label class="extra-item"><input type="checkbox" data-price="650"><span data-i18n="extraEconomy">Ekonomi Sistemi</span><strong data-price-try="650" data-price-prefix="+">+650 TL</strong></label>
+          </div>
+          <aside class="estimate-panel" aria-label="Tahmini fiyat">
+            <p class="eyebrow" data-i18n="quickCalc">Hızlı hesap</p>
+            <h3 data-i18n="selectPackage">Başlangıç paketini seç</h3>
+            <div class="package-switch" role="group" aria-label="Paket seçimi">
+              <button class="active" type="button" data-package="750" data-i18n="pkgBasic">Temel</button>
+              <button type="button" data-package="1500" data-i18n="pkgAdvanced">Gelişmiş</button>
+              <button type="button" data-package="3000">AI</button>
+              <button type="button" data-package="1700" data-i18n="pkgCustom">Özel</button>
+            </div>
+            <div class="estimate-total"><span data-i18n="estimatedTotal">Tahmini toplam</span><strong id="totalPrice">750 TL</strong></div>
+            <div class="estimate-selected" id="estimateSelected">
+              <span data-i18n="selectedEmpty">Henüz ekstra seçilmedi.</span>
+            </div>
+            <p class="estimate-note" data-i18n="estimateNote">Aralıklı fiyatlar minimum tutarla hesaplanır. Özel botlar, farklı programlar ve özel yazılımlar için fiyat bilgisi Discord sunucusunda proje detayına göre verilir.</p>
+            <button class="button primary full" type="button" id="startOrder" data-i18n="startOrder">Sipariş oluştur</button>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section" id="surec">
+        <div class="section-heading"><p class="eyebrow" data-i18n="processEyebrow">Teslim süreci</p><h2 data-i18n="processTitle">Net, takip edilebilir, temiz</h2></div>
+        <div class="process-grid">
+          <article><span>01</span><h3 data-i18n="process1Title">İhtiyaç analizi</h3><p data-i18n="process1Text">Sunucu yapısı, roller, kanallar, komutlar ve istenen bot karakteri netleşir.</p></article>
+          <article><span>02</span><h3 data-i18n="process2Title">Gelişim ve test</h3><p data-i18n="process2Text">Sistem önce test ortamında denenir; hata, yetki ve edge-case kontrolleri yapılır.</p></article>
+          <article><span>03</span><h3 data-i18n="process3Title">Kurulum ve teslim</h3><p data-i18n="process3Text">Bot sunucuna bağlanır, hosting ayarlanır ve kullanman gereken detaylar teslim edilir.</p></article>
+        </div>
+      </section>
+
+      <section class="section order-section" id="siparis">
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="orderEyebrow">Sipariş oluştur</p>
+          <h2 data-i18n="orderTitle">Bot fikrini gönder, Discord'da konuşalım.</h2>
+        </div>
+
+        <div class="order-layout">
+          <form class="order-form" id="orderForm">
+            <div class="order-summary wide" id="orderSummary">
+              <p class="eyebrow" data-i18n="orderSummaryEyebrow">Sipariş özeti</p>
+              <div class="summary-row"><span data-i18n="summaryPackage">Paket</span><strong id="summaryPackage">Temel</strong></div>
+              <div class="summary-row"><span data-i18n="summaryExtras">Ekstralar</span><strong id="summaryExtras">Henüz ekstra seçilmedi.</strong></div>
+              <div class="summary-row total"><span data-i18n="summaryTotal">Toplam</span><strong id="summaryTotal">750 TL</strong></div>
+            </div>
+            <label>
+              <span data-i18n="orderName">Adın</span>
+              <input type="text" name="name" autocomplete="name" required placeholder="Batu">
+            </label>
+            <label>
+              <span data-i18n="orderDiscord">Discord kullanıcı adın</span>
+              <input type="text" name="discord" autocomplete="username" required placeholder="phawes.py">
+            </label>
+            <label class="wide">
+              <span data-i18n="orderRequest">İsteklerin</span>
+              <textarea name="request" rows="6" placeholder="Bot türü, istediğin sistemler, bütçe veya örnek sunucu..."></textarea>
+            </label>
+            <label class="order-consent wide">
+              <input type="checkbox" name="consent" required>
+              <span data-i18n="orderConsent">Sipariş bilgilerimin Discord kanalına gönderilmesini onaylıyorum.</span>
+            </label>
+            <button class="button primary order-submit wide" type="submit" data-i18n="orderSubmit">Siparişi gönder</button>
+            <p class="order-status wide" id="orderStatus" role="status" aria-live="polite"></p>
+          </form>
+
+          <aside class="order-info">
+            <p class="eyebrow" data-i18n="orderInfoEyebrow">Nasıl çalışır?</p>
+            <ul>
+              <li data-i18n="orderInfo1">Formu doldurup gönderdiğinde sipariş Discord kanalıma düşer.</li>
+              <li data-i18n="orderInfo2">Özel sistemlerde fiyat, proje detayına göre Discord üzerinden netleşir.</li>
+              <li data-i18n="orderInfo3">Daha hızlı dönüş için Discord kullanıcı adını doğru yaz.</li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section contact-section" id="iletisim">
+        <div><p class="eyebrow" data-i18n="contactEyebrow">İletişim</p><h2 data-i18n="contactTitle">Bot fikrini birlikte netleştirelim.</h2><p data-i18n="contactText">Discord üzerinden yazarsan en hızlı şekilde dönerim. Sunucu daveti, bot daveti, Instagram ve kullanıcı adım burada.</p></div>
+        <div class="contact-grid">
+          <a class="contact-card" href="https://discord.gg/GpvNeAuQBM" target="_blank" rel="noreferrer"><span data-i18n="discordServer">Discord Sunucusu</span><strong>discord.gg/GpvNeAuQBM</strong></a>
+          <a class="contact-card" href="https://discord.com/oauth2/authorize?client_id=1479140672446402695&permissions=8&integration_type=0&scope=bot" target="_blank" rel="noreferrer"><span data-i18n="botInvite">Bot Davet Linki</span><strong data-i18n="addBot">Botu sunucuna ekle</strong></a>
+          <button class="contact-card copy-button" type="button" data-copy="phawes.py"><span>Discord</span><strong>phawes.py</strong></button>
+          <a class="contact-card" href="https://www.instagram.com/kkc.batu/" target="_blank" rel="noreferrer"><span>Instagram</span><strong>@kkc.batu</strong></a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p data-i18n="footerBrand">Phawes.py Discord bot hizmetleri</p>
+      <p data-i18n="footerNote">Fiyatlar istenen sistemin karmaşıklığına göre değişebilir.</p>
+    </footer>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite">Kopyalandı</div>
+  <script src="script.js" defer></script>
+</body>
+</html>
